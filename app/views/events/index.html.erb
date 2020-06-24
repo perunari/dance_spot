@@ -2,6 +2,13 @@
 
 <h1>Events</h1>
 
+<%= form_tag('/events', method: 'get') do %>
+<%= label_tag(:address_key, '開催地検索:') %>
+<%= text_field_tag(:address_key) %>
+<%= submit_tag('Search') %> <%= link_to 'Clear', events_path %>
+<% end %>
+
+<br>
 <table>
   <thead>
     <tr>
@@ -21,7 +28,7 @@
         <td><%= event.address %></td>
         <td><%= event.content %></td>
         <td><%= event.day %></td>
-        <td><%= event.genre_id %></td>
+        <td><%= event.genre.name %></td>
         <td><%= link_to 'Show', event %></td>
         <td><%= link_to 'Edit', edit_event_path(event) %></td>
         <td><%= link_to 'Destroy', event, method: :delete, data: { confirm: 'Are you sure?' } %></td>

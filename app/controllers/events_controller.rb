@@ -4,7 +4,11 @@ class EventsController < ApplicationController
   # GET /events
   # GET /events.json
   def index
-    @events = Event.all
+    if params[:address_key]
+      @events = Event.where('address LIKE ?', "%#{params[:address_key]}%")
+    else
+      @events = Event.all
+    end
   end
 
   # GET /events/1
