@@ -36,6 +36,13 @@
     <%= form.select :genre_id, Genre.all.map{|o| [o.name,o.id]} %>
   </div>
 
+
+  <div class="field">
+    <%= form.file_field :image %>
+    <%= form.submit 'アップロードする'%>
+  </div>
+
+
   <div class="actions">
     <%= form.submit %>
   </div>
