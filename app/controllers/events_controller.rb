@@ -6,8 +6,9 @@ class EventsController < ApplicationController
   def index
     if params[:address_key]
       @events = Event.where('address LIKE ?', "%#{params[:address_key]}%")
+      @events = @events.order("day DESC")
     else
-      @events = Event.all
+      @events = Event.all.order("day DESC")
     end
   end
 
