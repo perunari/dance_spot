@@ -1,29 +1,40 @@
 <p id="notice"><%= notice %></p>
 
 <p>
-  <strong>Name:</strong>
+  <strong>イベント名:</strong>
+  <br>
   <%= @event.name %>
+  </br>
 </p>
 
 <p>
-  <strong>Address:</strong>
+  <strong>開催地:</strong>
+  <br>
   <%= @event.address %>
+  </br>
 </p>
 
 <p>
-  <strong>Content:</strong>
+  <strong>詳細:</strong>
+  <br>
   <%= @event.content %>
+  </br>
 </p>
 
 <p>
-  <strong>Day:</strong>
+  <strong>開催日:</strong>
+  <br>
   <%= @event.day %>
+  </br>
 </p>
 
 <p>
-  <strong>Genre:</strong>
+  <strong>ジャンル:</strong>
+  <br>
   <%= @event.genre.name %>
+  </br>
 </p>
+
 
 <p>
   <strong>Picture:</strong>
@@ -34,10 +45,18 @@
 
 <%= content_tag(:iframe, 'map', src:'https://www.google.com/maps/embed/v1/place?key=AIzaSyAZfQbvZ3-mHUTOJ_Qq6125FhBxUIzthsM&q=' + @event.address, width: 800, height: 400, frameborder: 0) %>
 
+
 <br>
+<%= link_to '戻る', events_path, class: 'btn btn-secondary' %>
+<br>
+<br>
+<%= link_to '編集', edit_event_path(@event), class: 'btn btn-warning' %>
+<%= link_to '削除', @shop,method: :delete, data: { confirm: '削除します' }, class: 'btn btn-danger' %>
+
 
 
 <%= link_to 'Edit', edit_event_path(@event) %> |
 <%= link_to '戻る', events_path %>
+
 
 
