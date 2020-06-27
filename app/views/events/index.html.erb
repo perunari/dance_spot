@@ -14,7 +14,6 @@
     <tr>
       <th>イベント</th>
       <th>開催場所</th>
-      <th>詳細</th>
       <th>開催日</th>
       <th>ジャンル</th>
     </tr>
@@ -25,7 +24,6 @@
       <tr>
         <td><%= link_to event.name, event, class: 'widelink' %></td>
         <td><%= link_to event.address, event, class: 'widelink' %></td>
-        <td><%= link_to event.content, event, class: 'widelink' %></td>
         <td><%= link_to event.day, event, class: 'widelink' %></td>
         <td><%= link_to event.genre.name, event, class: 'widelink' %></td>
 
