@@ -17,7 +17,7 @@
 <p>
   <strong>詳細:</strong>
   <br>
-  <%= @event.content %>
+  <%= safe_join(@event.content.split("\n"),tag(:br))%>
   </br>
 </p>
 
