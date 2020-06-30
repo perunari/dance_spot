@@ -5,7 +5,9 @@ class CreateEvents < ActiveRecord::Migration[5.2]
       t.string :address
       t.text :content
       t.date :day
-      t.integer :genre_id
+      t.integer :genre_id, foreign_key: true
+      t.integer :user_id, foreign_key: true
+
 
       t.timestamps
     end

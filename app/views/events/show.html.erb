@@ -35,6 +35,15 @@
   </br>
 </p>
 
+<p>
+  <strong>投稿者:</strong>
+  <br>
+  <%= @event.user.dancename%>
+  </br>
+</p>
+
+
+
 
 <p>
   <%= image_tag(@event.image_url, width: '100%', height: 'auto', frameborder: 0)if @event.image.present? %>
