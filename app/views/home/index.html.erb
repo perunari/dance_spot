@@ -1,3 +1,8 @@
+<% if user_signed_in? %>
+  ログイン中 <strong><%= current_user.email %></strong>
+  <%= link_to "設定", edit_user_registration_path %> |
+  <%= link_to "ログアウト", destroy_user_session_path, method: :delete %>
+<% end %>
 <h1>Dance Spot</h1>
 <p>ダンスイベントや地域の練習スポット共有サイト</p>
 
