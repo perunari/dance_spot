@@ -5,9 +5,10 @@
 <%= form_tag('/events', method: 'get') do %>
 <%= label_tag(:address_key, '開催地検索:') %>
 <%= text_field_tag(:address_key) %>
-<%= submit_tag('Search') %> 
+<%= submit_tag('検索') %> 
 <%= link_to '検索リセット', events_path %>
 <% end %>
+
 
 <table class="table table-striped table-hover">
   <thead>

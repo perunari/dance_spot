@@ -44,9 +44,9 @@ class EventsController < ApplicationController
 
   def update
     if @event.user_id == current_user.id
-      respond_to do |format|
-        @event.update(event_params)
-      end
+      @event= Event.find(params[:id])
+      @event.update(event_params)
+      redirect_to @event
     else
       redirect_to @event, notice: "編集に失敗しました。投稿者のみ編集できます。"
   end

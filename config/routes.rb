@@ -1,7 +1,6 @@
 Rails.application.routes.draw do
   devise_for :users
   resources :events
-  resources :genres
   get 'home/index'
 
   root "home#index"
