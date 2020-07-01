@@ -13,15 +13,24 @@
 
   <body>
     <nav class="navbar navbar-dark bg-dark mb-2">
-      <a href="#" class="navbar-brand">Dance Map</a>
+      <div class= "contents">
+        <%= link_to image_tag("Dancespot.png", class: "image",width: "100px"), root_path %>
+        <%= link_to 'イベント一覧', events_path, class: 'btn btn-primary' %>
+        <%= link_to 'イベント投稿', new_event_path, class: 'btn btn-primary' %>
+      </div>
       <% if user_signed_in? %>
-        ログイン中 <strong><%= current_user.dancename %></strong>.
-        <%= link_to "Settings", edit_user_registration_path, :class => "navbar-link" %> |
-        <%= link_to "Logout", destroy_user_session_path, method: :delete, :class => "navbar-link" %>
+      <div class= "status">
+        <strong><%= current_user.dancename %></strong>
+        <%= link_to "ユーザー設定", edit_user_registration_path, class: 'btn btn-link' %> |
+        <%= link_to "ログアウト", destroy_user_session_path, method: :delete, class: 'btn btn-link' %>
+      </div>
       <% else %>
-        <%= link_to "Sign up", new_user_registration_path, :class => 'navbar-link' %> |
-        <%= link_to "Login", new_user_session_path, :class => 'navbar-link' %>
+      <div class= "status">
+        <%= link_to "新規登録", new_user_registration_path, class: 'btn btn-link' %> |
+        <%= link_to "ログイン", new_user_session_path, class: 'btn btn-link' %>
+      </div>
       <% end %>
+      </div>
     </nav>
     <div class='container'>
         <%= yield %>
