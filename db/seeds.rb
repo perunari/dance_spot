@@ -1,3 +1,10 @@
-User.create(dancername: aaaaaa,email: 'aa@aa.aa', password: 'aaaaaaa')
-User.create(dancername: bbbbbb,email: 'bb@bb.bb', password: 'bbbbbbb')
-User.create(dancername: cccccc,email: 'cc@cc.cc', password: 'ccccccc')
+Genre.create(name: "Hiphop")
+Genre.create(name: "Breakin")
+Genre.create(name: "Lock")
+Genre.create(name: "Pop")
+Genre.create(name: "House")
+Genre.create(name: "Krump")
+Genre.create(name: "Jazz")
+Genre.create(name: "Freestlye")
+Genre.create(name: "etc.")
+
