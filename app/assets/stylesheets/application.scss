@@ -8,12 +8,29 @@ a.widelink{
   height: 100%;
   text-decoration: none;
 }
-.form-horizontal{
-  text-align: center;
-}
-.form-group{
-  margin :0 auto;
-}
-.col-sm-1{
 
+
+.col-sm-10{
+  margin-top: 6px;
+}
+#event_name{
+  width:50%;
+}
+#event_address{
+  width: 50%;
+}
+
+textarea{
+  width :70%;
+  height:240px;
+}
+
+#event_day_i{
+  width :60px;
+}
+#event_day_2i{
+  width :40px;
+}
+#event_day_3i{
+  width :40px;
 }
