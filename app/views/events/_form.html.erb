@@ -1,7 +1,7 @@
 <%= form_with(model: event, local: true, html: {class: 'form-horizontal',role:'form'}) do |form| %>
   <% if event.errors.any? %>
     <div id="error_explanation">
-      <h2><%= pluralize(event.errors.count, "error") %> prohibited this event from being saved:</h2>
+      <h2><%= t("errors.template.header", model: Event.model_name.human, count: event.errors.count) %></h2>
       <ul>
       <% event.errors.full_messages.each do |message| %>
         <li><%= message %></li>
@@ -14,10 +14,7 @@
 <div class="form-group">
     <%= form.label :ジャンル, class: "col-sm-2 control-label" %>
     <div class='col-sm-10'>
-
     <%= form.select :genre_id,[['HIPHOP', 1], ['BREAK', 2],['Lock', 3],['Pop', 4],['House', 5],['Krump', 6],['Jazz', 7],['Freestyle', 8],['etc.', 9],], { include_blank: true}, { id: "genre_id" }%>
-     <%# Genre.all.map{|o| [o.name,o.id]}  %>
-    <%= link_to 'ジャンルを追加する', genres_path, class: 'btn btn-link' %>
     </div>
   </div>
   
