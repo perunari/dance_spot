@@ -1,6 +1,6 @@
 <p id="notice"><%= notice %></p>
 
-<h1>Events</h1>
+<h1>イベント一覧</h1>
 
 <%= form_tag('/events', method: 'get') do %>
 <%= label_tag(:address_key, '開催地検索:') %>
@@ -30,5 +30,3 @@
     <% end %>
   </tbody>
 </table>
-<%= link_to 'イベントを追加する', new_event_path, class: 'btn btn-primary' %>
-<%= link_to 'ジャンルを追加する', genres_path, class: 'btn btn-primary' %>
