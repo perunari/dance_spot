@@ -2,42 +2,54 @@
 <p>
   <strong>イベント名:</strong>
   <br>
-  <%= @event.name %>
+  <div class= eventcontent>
+    <%= @event.name %>
+  </div>
   </br>
 </p>
 
 <p>
   <strong>開催場所:</strong>
   <br>
-  <%= @event.address %>
+  <div class= eventcontent>
+    <%= @event.address %>
+  </div>
   </br>
 </p>
 
 <p>
   <strong>詳細:</strong>
   <br>
-  <%= safe_join(@event.content.split("\n"),tag(:br))%>
+  <div class= eventcontent>
+    <%= safe_join(@event.content.split("\n"),tag(:br))%>
+  </div>
   </br>
 </p>
 
 <p>
   <strong>開催日:</strong>
   <br>
-  <%= @event.day %>
+  <div class= eventcontent>
+    <%= @event.day %>
+  </div>
   </br>
 </p>
 
 <p>
   <strong>ジャンル:</strong>
   <br>
-  <%= @event.genre.name %>
+  <div class= eventcontent>
+    <%= @event.genre.name %>
+  </div>
   </br>
 </p>
 
 <p>
   <strong>投稿者:</strong>
   <br>
-  <%= @event.user.dancename%>
+  <div class= eventcontent>
+    <%= @event.user.dancename%>
+  </div>
   </br>
 </p>
 
