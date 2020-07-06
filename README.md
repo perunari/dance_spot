@@ -28,3 +28,37 @@ HTML,CSS,Ruby,Ruby,Rails,ArtText3
 
 ## 今後実装したい機能
 　閲覧ユーザーがDanceSpot内で、イベントエントリーができる機能を実装していきたい。
+
+
+## DB設計
+## genresテーブル
+
+|Column|Type|Option|
+|------|----|------|
+|name|string|null: false|
+
+### Association
+- has_many :events
+
+## eventsテーブル
+|Column|Type|Option|
+|------|----|------|
+|name|string|null: false|
+|address|string|null: false|
+|content|text|null: false|
+|day|date|null: false|
+|image|string||
+
+### Association
+- belongs_to :genre
+- belongs_to :user
+
+## usersテーブル
+|Column|Type|Option|
+|------|----|------|
+|dancename|string|null: false|
+|email|string|null: false|
+|password|string|null: false|
+
+### Association
+- has_many :events
