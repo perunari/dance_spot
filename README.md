@@ -5,6 +5,9 @@
 ![dancespot](https://user-images.githubusercontent.com/64058494/86305952-e513b880-bc4d-11ea-8c54-70084ace24bf.jpg)
 ## アプリURL
   https://dance-spot.herokuapp.com/
+  テスト投稿用ユーザー
+    メールアドレス  【aa@aa.aa】
+    パスワード     【aaaaaa】
   
 ## アプリの内容
   ダンスイベントの投稿、閲覧が出来るアプリです。
