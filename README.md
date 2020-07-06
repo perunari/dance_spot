@@ -6,9 +6,12 @@
 ## アプリURL
   https://dance-spot.herokuapp.com/
  
-    テスト投稿用ユーザー
-    メールアドレス  【aa@aa.aa】
-    パスワード     【aaaaaa】
+    テスト投稿用ログインユーザー
+    　メールアドレス  【aa@aa.aa】
+    　パスワード     【aaaaaa】
+    テスト確認用ログインユーザー
+    　メールアドレス  【bb@bb.bb】
+    　パスワード     【bbbbbb】
   
 ## アプリの内容
   ダンスイベントの投稿、閲覧が出来るアプリです。
@@ -56,8 +59,8 @@ HTML,CSS,Ruby,Ruby,Rails,ArtText3
 ## usersテーブル
 |Column|Type|Option|
 |------|----|------|
-|dancename|string|null: false|
-|email|string|null: false|
+|dancename|string|null: false, unique: true|
+|email|string|null: false, unique: true|
 |password|string|null: false|
 
 ### Association
