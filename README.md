@@ -6,7 +6,9 @@
 ## アプリURL
   https://dance-spot.herokuapp.com/
   テスト投稿用ユーザー
+  
     メールアドレス  【aa@aa.aa】
+    
     パスワード     【aaaaaa】
   
 ## アプリの内容
