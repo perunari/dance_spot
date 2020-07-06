@@ -23,5 +23,8 @@
 ●　イベント一覧画面
 <img width="1326" alt="danspo一覧" src="https://user-images.githubusercontent.com/64058494/86306459-49834780-bc4f-11ea-8529-541a9946d530.png">
 
-使用しているもの
+## 開発環境
 HTML,CSS,Ruby,Ruby,Rails,ArtText3
+
+## 今後実装したい機能
+　閲覧ユーザーがDanceSpot内で、イベントエントリーができる機能を実装していきたい。
