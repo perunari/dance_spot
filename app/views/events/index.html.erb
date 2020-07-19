@@ -17,6 +17,7 @@
       <th>開催場所</th>
       <th>開催日</th>
       <th>ジャンル</th>
+      <th>参加したい！</th>
     </tr>
   </thead>
 
@@ -27,6 +28,20 @@
         <td><%= link_to event.address, event, class: 'widelink' %></td>
         <td><%= link_to event.day, event, class: 'widelink' %></td>
         <td><%= link_to event.genre.name, event, class: 'widelink' %></td>
+        <td>
+        <% if user_signed_in?%>
+          <% if current_user.already_favorited?(event) %>
+            <%= link_to '★', event_favorites_path(event), method: :delete %>
+            <%= event.favorites.count %>
+          <% else %>
+            <%= link_to '☆', event_favorites_path(event), method: :post %>
+          <%= event.favorites.count %>
+          <% end %>
+        <% else %>
+          <%= "☆ #{event.favorites.count}"%>
+        <% end %>
+          
+        </td>
       </tr>
     <% end %>
   </tbody>

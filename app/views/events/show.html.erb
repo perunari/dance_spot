@@ -5,7 +5,6 @@
   <div class= eventcontent>
     <%= @event.name %>
   </div>
-  </br>
 </p>
 
 <p>
@@ -14,7 +13,6 @@
   <div class= eventcontent>
     <%= @event.address %>
   </div>
-  </br>
 </p>
 
 <p>
@@ -23,7 +21,6 @@
   <div class= eventcontent>
     <%= safe_join(@event.content.split("\n"),tag(:br))%>
   </div>
-  </br>
 </p>
 
 <p>
@@ -32,7 +29,6 @@
   <div class= eventcontent>
     <%= @event.day %>
   </div>
-  </br>
 </p>
 
 <p>
@@ -41,7 +37,6 @@
   <div class= eventcontent>
     <%= @event.genre.name %>
   </div>
-  </br>
 </p>
 
 <p>
@@ -50,9 +45,22 @@
   <div class= eventcontent>
     <%= @event.user.dancename%>
   </div>
-  </br>
 </p>
 
+  <strong>参加したい人:</strong>
+  <br>
+  <div class= eventcontent>
+    <% if user_signed_in?%>
+      <% if current_user.already_favorited?(@event) %>
+        <%= link_to '★', event_favorites_path(@event), method: :delete %>
+      <% else %>
+        <%= link_to '☆', event_favorites_path(@event), method: :post %>
+      <% end %>
+      <%= @event.favorites.count%>
+    <% else %>
+      <%= "☆ #{@event.favorites.count}"%>
+    <% end %>
+</div>
 
 
 
