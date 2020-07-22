@@ -31,10 +31,10 @@
         <td>
         <% if user_signed_in?%>
           <% if current_user.already_favorited?(event) %>
-            <%= link_to '★', event_favorites_path(event), method: :delete %>
+            <%= link_to '★', event_favorites_path(event), method: :delete, remote: true%>
             <%= event.favorites.count %>
           <% else %>
-            <%= link_to '☆', event_favorites_path(event), method: :post %>
+            <%= link_to '☆', event_favorites_path(event), method: :post, remote: true%>
           <%= event.favorites.count %>
           <% end %>
         <% else %>
