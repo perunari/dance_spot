@@ -40,7 +40,7 @@
 <br>
 
 ## 開発環境
-HTML,CSS,Ruby,Ruby,Rails,ArtText3
+HTML,CSS,Ruby,Ruby,Rails,jquery,ArtText3
 
 ## 今後実装したい機能
     １　エントリー機能の実装
@@ -81,3 +81,13 @@ HTML,CSS,Ruby,Ruby,Rails,ArtText3
 
 ### Association
 - has_many :events
+
+## favoriteテーブル
+|Column|Type|Option|
+|------|----|------|
+|user_id|integer||
+|event_id|integer||
+
+### Association
+ - belongs_to :user
+ - belongs_to :event
