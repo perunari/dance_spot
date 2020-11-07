@@ -52,9 +52,9 @@
   <div class= eventcontent>
     <% if user_signed_in?%>
       <% if current_user.already_favorited?(@event) %>
-        <%= link_to '★', event_favorites_path(@event), method: :delete, remote: true, data: {"turbolinks"=>false} %>
+        <%= link_to '★', event_favorites_path(@event), method: :delete, data: {"turbolinks"=>false} %>
       <% else %>
-        <%= link_to '☆', event_favorites_path(@event), method: :post, remote: true, data: {"turbolinks"=>false} %>
+        <%= link_to '☆', event_favorites_path(@event), method: :post, data: {"turbolinks"=>false} %>
       <% end %>
       <%= @event.favorites.count%>
     <% else %>
