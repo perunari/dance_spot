@@ -19,15 +19,34 @@
   
   ログインすればイベントの投稿が可能で、すぐ簡単にイベントの告知をする事ができます。
   また、イベントを探している方はログインしなくてもイベントの詳細を閲覧する事が可能です。
+  <br>
+  <br>
     
 ●　イベント投稿画面
 <img width="1063" alt="danspo投稿" src="https://user-images.githubusercontent.com/64058494/86306649-cb737080-bc4f-11ea-841b-534a9b1796b1.png">
 
+<br>
+●　イベント詳細画面<br>
+投稿内容が反映され、入力内容から位置情報を取得し、Google Mapが表示されるようになっており、イベントの投稿者のみ編集と削除が出来る仕様となっています。
+
+![c538d299c6ce5af932da78aeed30e4bf](https://user-images.githubusercontent.com/64058494/88260198-daa18780-ccfe-11ea-96cd-9adde5ab3686.gif)
+
+
 ●　イベント一覧画面
-<img width="1326" alt="danspo一覧" src="https://user-images.githubusercontent.com/64058494/86306459-49834780-bc4f-11ea-8529-541a9946d530.png">
+<img width="1438" alt="danspo一覧" src="https://user-images.githubusercontent.com/64058494/88258231-9f04be80-ccfa-11ea-81f7-86418064fe1f.png">
+
+<br>
+
+●　実装機能
+<br>
+  イベントの規模を分かりやすくするため、参加したいボタン(いいね機能のようなもの)を実装して、参加したいと考えている人数を可視化しました。<br>
+  参加したいボタンは、ログインユーザーのみ押す事が可能で、非同期通信で実装しています。
+[![Image from Gyazo](https://i.gyazo.com/96dfcafdfdc84f31b25f65f003450e5d.gif)](https://gyazo.com/96dfcafdfdc84f31b25f65f003450e5d)
+
+<br>
 
 ## 開発環境
-HTML,CSS,Ruby,Ruby,Rails,ArtText3
+HTML,CSS,Ruby,Ruby,Rails,jquery,ArtText3
 
 ## 今後実装したい機能
     １　エントリー機能の実装
@@ -68,3 +87,13 @@ HTML,CSS,Ruby,Ruby,Rails,ArtText3
 
 ### Association
 - has_many :events
+
+## favoriteテーブル
+|Column|Type|Option|
+|------|----|------|
+|user_id|integer||
+|event_id|integer||
+
+### Association
+ - belongs_to :user
+ - belongs_to :event
